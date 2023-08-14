@@ -17,7 +17,13 @@
 		3D3D7BF92A87BA92001D8093 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3D7BF82A87BA92001D8093 /* MainPageViewController.swift */; };
 		3D3D7BFB2A87BAB9001D8093 /* MainPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3D7BFA2A87BAB9001D8093 /* MainPageView.swift */; };
 		3D3D7BFD2A87BB7A001D8093 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3D7BFC2A87BB7A001D8093 /* TabBarController.swift */; };
-		3D3D7C022A87D9FB001D8093 /* MainPageViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3D7C012A87D9FB001D8093 /* MainPageViewProtocol.swift */; };
+		3D5317D72A8A60AC0061BAC5 /* MainPageViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5317D62A8A60AC0061BAC5 /* MainPageViewControllerDelegate.swift */; };
+		3D5317D92A8A63840061BAC5 /* DropDownMenuViewControllerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5317D82A8A63840061BAC5 /* DropDownMenuViewControllerAssembly.swift */; };
+		3D5317DB2A8A63AC0061BAC5 /* DropDownMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5317DA2A8A63AC0061BAC5 /* DropDownMenuViewController.swift */; };
+		3D5317DD2A8A63FB0061BAC5 /* DropDownMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5317DC2A8A63FB0061BAC5 /* DropDownMenuView.swift */; };
+		3D5317DF2A8A64200061BAC5 /* DropDownMenuViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5317DE2A8A64200061BAC5 /* DropDownMenuViewControllerDelegate.swift */; };
+		3D5317E12A8A644E0061BAC5 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5317E02A8A644E0061BAC5 /* City.swift */; };
+		3D5317E32A8A651D0061BAC5 /* LocationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5317E22A8A651D0061BAC5 /* LocationButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +39,13 @@
 		3D3D7BF82A87BA92001D8093 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		3D3D7BFA2A87BAB9001D8093 /* MainPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageView.swift; sourceTree = "<group>"; };
 		3D3D7BFC2A87BB7A001D8093 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		3D3D7C012A87D9FB001D8093 /* MainPageViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewProtocol.swift; sourceTree = "<group>"; };
+		3D5317D62A8A60AC0061BAC5 /* MainPageViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewControllerDelegate.swift; sourceTree = "<group>"; };
+		3D5317D82A8A63840061BAC5 /* DropDownMenuViewControllerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownMenuViewControllerAssembly.swift; sourceTree = "<group>"; };
+		3D5317DA2A8A63AC0061BAC5 /* DropDownMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownMenuViewController.swift; sourceTree = "<group>"; };
+		3D5317DC2A8A63FB0061BAC5 /* DropDownMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownMenuView.swift; sourceTree = "<group>"; };
+		3D5317DE2A8A64200061BAC5 /* DropDownMenuViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownMenuViewControllerDelegate.swift; sourceTree = "<group>"; };
+		3D5317E02A8A644E0061BAC5 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		3D5317E22A8A651D0061BAC5 /* LocationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,14 +78,11 @@
 		3D3D7BD72A87AD0F001D8093 /* MySpar */ = {
 			isa = PBXGroup;
 			children = (
+				3D5317D12A8A5B8D0061BAC5 /* Resources */,
+				3D5317D02A8A5B7A0061BAC5 /* Core */,
 				3D3D7BF32A87B82B001D8093 /* Entities */,
 				3D3D7BF02A87B7E4001D8093 /* Extensions */,
 				3D3D7BEF2A87B7C7001D8093 /* PresentationLayer */,
-				3D3D7BD82A87AD0F001D8093 /* AppDelegate.swift */,
-				3D3D7BDA2A87AD0F001D8093 /* SceneDelegate.swift */,
-				3D3D7BE12A87AD10001D8093 /* Assets.xcassets */,
-				3D3D7BE32A87AD10001D8093 /* LaunchScreen.storyboard */,
-				3D3D7BE62A87AD10001D8093 /* Info.plist */,
 			);
 			path = MySpar;
 			sourceTree = "<group>";
@@ -81,8 +90,11 @@
 		3D3D7BEF2A87B7C7001D8093 /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				3D5317D52A8A5D130061BAC5 /* Delegates */,
+				3D5317D42A8A5CEA0061BAC5 /* Assembels */,
+				3D5317D32A8A5CDA0061BAC5 /* Controllers */,
+				3D5317D22A8A5CD20061BAC5 /* Models */,
 				3D3D7C032A87DBD7001D8093 /* Views */,
-				3D3D7C002A87D9DF001D8093 /* Contracts */,
 			);
 			path = PresentationLayer;
 			sourceTree = "<group>";
@@ -103,23 +115,69 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
-		3D3D7C002A87D9DF001D8093 /* Contracts */ = {
-			isa = PBXGroup;
-			children = (
-				3D3D7C012A87D9FB001D8093 /* MainPageViewProtocol.swift */,
-			);
-			path = Contracts;
-			sourceTree = "<group>";
-		};
 		3D3D7C032A87DBD7001D8093 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				3D3D7BF62A87BA30001D8093 /* MainPageViewControllerAssembly.swift */,
 				3D3D7BFA2A87BAB9001D8093 /* MainPageView.swift */,
-				3D3D7BFC2A87BB7A001D8093 /* TabBarController.swift */,
-				3D3D7BF82A87BA92001D8093 /* MainPageViewController.swift */,
+				3D5317DC2A8A63FB0061BAC5 /* DropDownMenuView.swift */,
+				3D5317E22A8A651D0061BAC5 /* LocationButton.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		3D5317D02A8A5B7A0061BAC5 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				3D3D7BDA2A87AD0F001D8093 /* SceneDelegate.swift */,
+				3D3D7BD82A87AD0F001D8093 /* AppDelegate.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		3D5317D12A8A5B8D0061BAC5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3D3D7BE62A87AD10001D8093 /* Info.plist */,
+				3D3D7BE32A87AD10001D8093 /* LaunchScreen.storyboard */,
+				3D3D7BE12A87AD10001D8093 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3D5317D22A8A5CD20061BAC5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3D5317E02A8A644E0061BAC5 /* City.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3D5317D32A8A5CDA0061BAC5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3D3D7BF82A87BA92001D8093 /* MainPageViewController.swift */,
+				3D3D7BFC2A87BB7A001D8093 /* TabBarController.swift */,
+				3D5317DA2A8A63AC0061BAC5 /* DropDownMenuViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3D5317D42A8A5CEA0061BAC5 /* Assembels */ = {
+			isa = PBXGroup;
+			children = (
+				3D3D7BF62A87BA30001D8093 /* MainPageViewControllerAssembly.swift */,
+				3D5317D82A8A63840061BAC5 /* DropDownMenuViewControllerAssembly.swift */,
+			);
+			path = Assembels;
+			sourceTree = "<group>";
+		};
+		3D5317D52A8A5D130061BAC5 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				3D5317D62A8A60AC0061BAC5 /* MainPageViewControllerDelegate.swift */,
+				3D5317DE2A8A64200061BAC5 /* DropDownMenuViewControllerDelegate.swift */,
+			);
+			path = Delegates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,12 +250,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D3D7C022A87D9FB001D8093 /* MainPageViewProtocol.swift in Sources */,
+				3D5317D72A8A60AC0061BAC5 /* MainPageViewControllerDelegate.swift in Sources */,
 				3D3D7BF22A87B7FF001D8093 /* UIColor.swift in Sources */,
 				3D3D7BFD2A87BB7A001D8093 /* TabBarController.swift in Sources */,
+				3D5317E32A8A651D0061BAC5 /* LocationButton.swift in Sources */,
+				3D5317DD2A8A63FB0061BAC5 /* DropDownMenuView.swift in Sources */,
+				3D5317DF2A8A64200061BAC5 /* DropDownMenuViewControllerDelegate.swift in Sources */,
 				3D3D7BFB2A87BAB9001D8093 /* MainPageView.swift in Sources */,
 				3D3D7BD92A87AD0F001D8093 /* AppDelegate.swift in Sources */,
 				3D3D7BF72A87BA30001D8093 /* MainPageViewControllerAssembly.swift in Sources */,
+				3D5317D92A8A63840061BAC5 /* DropDownMenuViewControllerAssembly.swift in Sources */,
+				3D5317DB2A8A63AC0061BAC5 /* DropDownMenuViewController.swift in Sources */,
+				3D5317E12A8A644E0061BAC5 /* City.swift in Sources */,
 				3D3D7BF52A87B840001D8093 /* AppColorEnum.swift in Sources */,
 				3D3D7BF92A87BA92001D8093 /* MainPageViewController.swift in Sources */,
 				3D3D7BDB2A87AD0F001D8093 /* SceneDelegate.swift in Sources */,
@@ -341,7 +405,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QQXC2V882Q;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MySpar/Info.plist;
+				INFOPLIST_FILE = MySpar/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -368,7 +432,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QQXC2V882Q;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MySpar/Info.plist;
+				INFOPLIST_FILE = MySpar/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

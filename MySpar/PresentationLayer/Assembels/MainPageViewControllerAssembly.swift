@@ -9,12 +9,12 @@ import Foundation
 import UIKit
 
 struct MainPageViewControllerAssembly {
-    func create() -> UIViewController {
+    func create() -> MainPageViewController {
         let mainPageView = MainPageView()
 
         let controller = MainPageViewController(mainPageView: mainPageView)
 
-//        resumeView.delegate = controller
+        mainPageView.delegate = controller
 
         return controller
     }
