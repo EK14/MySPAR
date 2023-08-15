@@ -15,6 +15,7 @@ class TabBarController: UITabBarController {
     }
     
     private func setTabBar(){
+        self.tabBar.backgroundColor = .white
         let viewController = MainPageViewControllerAssembly().create()
         let mainPageVC = getViewController(viewController: viewController, title: "Главная", image: "tabBarImage", selectedImage: "tabBarSelectedImage", badge: nil)
         self.setViewControllers([mainPageVC], animated: false)

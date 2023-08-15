@@ -48,6 +48,14 @@ class MainPageViewController: UIViewController {
 }
 
 extension MainPageViewController: MainPageViewControllerDelegate {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        return UICollectionViewCell()
+    }
+    
     func locationBtnDidTap() {
         if btnState{
             dropDownMenuViewPopUp(currentYOrigin: view.frame.height, changedYOrigin: 120)

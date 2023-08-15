@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-protocol MainPageViewControllerDelegate: AnyObject{
+protocol MainPageViewControllerDelegate: AnyObject, UICollectionViewDataSource, UICollectionViewDelegate{
     func locationBtnDidTap()
     func titleDidSelected(title: String)
     func cancelBtnDidTap()
