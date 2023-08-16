@@ -52,7 +52,18 @@ extension MainPageViewController: MainPageViewControllerDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        sections[section].count
+        switch sections[section]{
+        case .stories:
+            return sections[section].count
+        case .promotions:
+            return 100
+        case .selection:
+            return sections[section].count
+        case .recommend:
+            return sections[section].count
+        case .sweetMood:
+            return sections[section].count
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -62,8 +73,8 @@ extension MainPageViewController: MainPageViewControllerDelegate {
             cell.setup(items[indexPath.row])
             return cell
         case .promotions(let items):
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StoryCollectionViewCell", for: indexPath) as! PromotionsCollectionViewCell
-            cell.setup(items[indexPath.row])
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PromotionsCollectionViewCell", for: indexPath) as! PromotionsCollectionViewCell
+            cell.setup(items[indexPath.row % 20])
             return cell
         case .selection(let items):
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StoryCollectionViewCell", for: indexPath) as! SelectionCollectionViewCell

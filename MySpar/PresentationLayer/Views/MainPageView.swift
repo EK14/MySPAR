@@ -29,17 +29,28 @@ class MainPageView: UIView {
     }
     
     private func setupCollectionView(){
-//        let layout = UICollectionViewFlowLayout()
-//        layout.scrollDirection = .horizontal
-//        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: createLayout())
         collectionView.dataSource = delegate
         collectionView.delegate = delegate
         collectionView.register(StoryCollectionViewCell.self, forCellWithReuseIdentifier: "StoryCollectionViewCell")
+        collectionView.register(PromotionsCollectionViewCell.self, forCellWithReuseIdentifier: "PromotionsCollectionViewCell")
         collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.isPagingEnabled = false
+        let topBorder = CALayer()
+        topBorder.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 0.5)
+        topBorder.backgroundColor = UIColor.gray.cgColor
+        collectionView.layer.addSublayer(topBorder)
+        DispatchQueue.main.async {
+            self.collectionView.scrollToItem(
+                at: IndexPath(item: 50, section: 1),
+                at: .centeredHorizontally,
+                animated: false
+            )
+        }
+        collectionView.isPagingEnabled = true
         self.addSubview(collectionView)
         NSLayoutConstraint.activate([
-            collectionView.topAnchor.constraint(equalTo: btn.bottomAnchor),
+            collectionView.topAnchor.constraint(equalTo: btn.bottomAnchor, constant: 5),
             collectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             collectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             collectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
@@ -61,10 +72,18 @@ class MainPageView: UIView {
                 
                 section.orthogonalScrollingBehavior = .continuous
                 section.contentInsets = .init(top: 10, leading: 5, bottom: 5, trailing: 5)
-                
                 return section
             case .promotions:
-                return nil
+                let item = NSCollectionLayoutItem(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1)))
+                
+                let group = NSCollectionLayoutGroup.horizontal(layoutSize: .init(widthDimension: .absolute(UIScreen.main.bounds.width - 45), heightDimension: .fractionalHeight(0.25)), subitems: [item])
+                
+                let section = NSCollectionLayoutSection(group: group)
+                
+                section.orthogonalScrollingBehavior = .groupPagingCentered
+                section.contentInsets = .init(top: 10, leading: 5, bottom: 5, trailing: 5)
+                section.interGroupSpacing = 10
+                return section
             case .selection:
                 return nil
             case .recommend:

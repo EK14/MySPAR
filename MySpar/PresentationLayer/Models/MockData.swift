@@ -20,15 +20,28 @@ struct MockData{
                   ListItem(title: "Городецкая\nроспись", image: "stories_icon7")])
     }()
     
-//    private let promotions: ListSection = {
-//        .promotions(["promotions_icon1", "promotions_icon2", "promotions_icon3",
-//                     "promotions_icon4", "promotions_icon5", "promotions_icon6",
-//                     "promotions_icon7", "promotions_icon8", "promotions_icon9",
-//                     "promotions_icon10", "promotions_icon11", "promotions_icon12",
-//                     "promotions_icon13", "promotions_icon14", "promotions_icon15",
-//                     "promotions_icon16", "promotions_icon17", "promotions_icon18",
-//                     "promotions_icon19", "promotions_icon20"])
-//    }()
+    private let promotions: ListSection = {
+        .promotions([ListItem(title: "", image: "promotions_icon1"),
+                     ListItem(title: "", image: "promotions_icon2"),
+                     ListItem(title: "", image: "promotions_icon3"),
+                     ListItem(title: "", image: "promotions_icon4"),
+                     ListItem(title: "", image: "promotions_icon5"),
+                     ListItem(title: "", image: "promotions_icon6"),
+                     ListItem(title: "", image: "promotions_icon7"),
+                     ListItem(title: "", image: "promotions_icon8"),
+                     ListItem(title: "", image: "promotions_icon9"),
+                     ListItem(title: "", image: "promotions_icon10"),
+                     ListItem(title: "", image: "promotions_icon11"),
+                     ListItem(title: "", image: "promotions_icon12"),
+                     ListItem(title: "", image: "promotions_icon13"),
+                     ListItem(title: "", image: "promotions_icon14"),
+                     ListItem(title: "", image: "promotions_icon15"),
+                     ListItem(title: "", image: "promotions_icon16"),
+                     ListItem(title: "", image: "promotions_icon17"),
+                     ListItem(title: "", image: "promotions_icon18"),
+                     ListItem(title: "", image: "promotions_icon19"),
+                     ListItem(title: "", image: "promotions_icon20"),])
+    }()
 //
 //    private let selection: ListSection = {
 //        .selection(["selection_icon1", "selection_icon2", "selection_icon3", "selection_icon4", "selection_icon5", "selection_icon6", "selection_icon7", "selection_icon8", "selection_icon9"])
@@ -43,6 +56,6 @@ struct MockData{
 //    }()
     
     var pageData: [ListSection]{
-        [stories]
+        [stories, promotions]
     }
 }

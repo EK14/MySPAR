@@ -37,7 +37,7 @@ class LocationButton: UIButton {
         addSubview(label)
         clipsToBounds = true
         layer.cornerRadius = 20
-        layer.borderWidth = 1
+        layer.borderWidth = 0.5
         layer.borderColor = UIColor.gray.cgColor
     }
     
