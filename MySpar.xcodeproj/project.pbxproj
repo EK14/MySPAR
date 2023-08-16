@@ -14,6 +14,7 @@
 		3D00A6F02A8BCEEC005B2376 /* SelectionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D00A6EF2A8BCEEC005B2376 /* SelectionCollectionViewCell.swift */; };
 		3D00A6F22A8BCF41005B2376 /* GoodsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D00A6F12A8BCF41005B2376 /* GoodsCollectionViewCell.swift */; };
 		3D00A6F42A8BFBF8005B2376 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D00A6F32A8BFBF8005B2376 /* ListItem.swift */; };
+		3D00A6F82A8D461D005B2376 /* CollectionViewHeaderReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D00A6F72A8D461D005B2376 /* CollectionViewHeaderReusableView.swift */; };
 		3D3D7BD92A87AD0F001D8093 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3D7BD82A87AD0F001D8093 /* AppDelegate.swift */; };
 		3D3D7BDB2A87AD0F001D8093 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3D7BDA2A87AD0F001D8093 /* SceneDelegate.swift */; };
 		3D3D7BE22A87AD10001D8093 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D3D7BE12A87AD10001D8093 /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 		3D00A6EF2A8BCEEC005B2376 /* SelectionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionCollectionViewCell.swift; sourceTree = "<group>"; };
 		3D00A6F12A8BCF41005B2376 /* GoodsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsCollectionViewCell.swift; sourceTree = "<group>"; };
 		3D00A6F32A8BFBF8005B2376 /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
+		3D00A6F72A8D461D005B2376 /* CollectionViewHeaderReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewHeaderReusableView.swift; sourceTree = "<group>"; };
 		3D3D7BD52A87AD0F001D8093 /* MySpar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySpar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D3D7BD82A87AD0F001D8093 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D3D7BDA2A87AD0F001D8093 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				3D00A6EC2A8BCE43005B2376 /* PromotionsCollectionViewCell.swift */,
 				3D00A6EF2A8BCEEC005B2376 /* SelectionCollectionViewCell.swift */,
 				3D00A6F12A8BCF41005B2376 /* GoodsCollectionViewCell.swift */,
+				3D00A6F72A8D461D005B2376 /* CollectionViewHeaderReusableView.swift */,
 			);
 			path = CollectionViewCells;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 			files = (
 				3D5317D72A8A60AC0061BAC5 /* MainPageViewControllerDelegate.swift in Sources */,
 				3D3D7BF22A87B7FF001D8093 /* UIColor.swift in Sources */,
+				3D00A6F82A8D461D005B2376 /* CollectionViewHeaderReusableView.swift in Sources */,
 				3D3D7BFD2A87BB7A001D8093 /* TabBarController.swift in Sources */,
 				3D00A6F02A8BCEEC005B2376 /* SelectionCollectionViewCell.swift in Sources */,
 				3D00A6F42A8BFBF8005B2376 /* ListItem.swift in Sources */,

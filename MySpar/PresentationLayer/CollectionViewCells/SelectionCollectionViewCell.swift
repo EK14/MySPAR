@@ -11,15 +11,9 @@ class SelectionCollectionViewCell: UICollectionViewCell {
     
     private let img = UIImageView()
     
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        img.isHidden = true
-    }
-    
     func setup(_ item: ListItem){
-        img.isHidden = false
+        img.image = nil
         
-        let img = UIImageView()
         img.translatesAutoresizingMaskIntoConstraints = false
         img.image = UIImage(named: item.image)
         img.clipsToBounds = true

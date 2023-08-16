@@ -29,12 +29,16 @@ class MainPageView: UIView {
     }
     
     private func setupCollectionView(){
-        collectionView = UICollectionView(frame: .zero, collectionViewLayout: createLayout())
+        let layout = createLayout()
+        layout.configuration.scrollDirection = .vertical
+        collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.dataSource = delegate
         collectionView.delegate = delegate
+        collectionView.register(CollectionViewHeaderReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "CollectionViewHeaderReusableView")
         collectionView.register(StoryCollectionViewCell.self, forCellWithReuseIdentifier: "StoryCollectionViewCell")
         collectionView.register(PromotionsCollectionViewCell.self, forCellWithReuseIdentifier: "PromotionsCollectionViewCell")
         collectionView.register(SelectionCollectionViewCell.self, forCellWithReuseIdentifier: "SelectionCollectionViewCell")
+        collectionView.register(GoodsCollectionViewCell.self, forCellWithReuseIdentifier: "GoodsCollectionViewCell")
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.isPagingEnabled = false
         let topBorder = CALayer()
@@ -70,9 +74,11 @@ class MainPageView: UIView {
             case .selection:
                 return setupSection(.init(widthDimension: .fractionalWidth(0.25), heightDimension: .fractionalHeight(0.18)), .init(top: 5, leading: 23, bottom: 5, trailing: 5), 10, .continuous)
             case .recommend:
-                return nil
+                return setupSection(.init(widthDimension: .fractionalWidth(0.4), heightDimension: .fractionalHeight(0.25)), .init(top: 5, leading: 23, bottom: 5, trailing: 5), 10, .continuous)
             case .sweetMood:
-                return nil
+                return setupSection(.init(widthDimension: .fractionalWidth(0.4), heightDimension: .fractionalHeight(0.25)), .init(top: 5, leading: 23, bottom: 5, trailing: 5), 10, .continuous)
+            case .BBQWithABang:
+                return setupSection(.init(widthDimension: .fractionalWidth(0.4), heightDimension: .fractionalHeight(0.25)), .init(top: 5, leading: 23, bottom: 5, trailing: 5), 10, .continuous)
             }
         }
     }
@@ -88,7 +94,12 @@ class MainPageView: UIView {
         section.orthogonalScrollingBehavior = orthogonalScrollingBehavior
         section.contentInsets = contentInsets
         section.interGroupSpacing = interGroupSpacing
+        section.boundarySupplementaryItems = [supplementaryHeaderItem()]
         return section
+    }
+    
+    private func supplementaryHeaderItem() -> NSCollectionLayoutBoundarySupplementaryItem{
+        .init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .estimated(80)), elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
     }
     
     @objc func buttonDidTouched(){

@@ -63,6 +63,8 @@ extension MainPageViewController: MainPageViewControllerDelegate {
             return sections[section].count
         case .sweetMood:
             return sections[section].count
+        case .BBQWithABang:
+            return sections[section].count
         }
     }
     
@@ -81,13 +83,28 @@ extension MainPageViewController: MainPageViewControllerDelegate {
             cell.setup(items[indexPath.row])
             return cell
         case .recommend(let items):
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StoryCollectionViewCell", for: indexPath) as! GoodsCollectionViewCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GoodsCollectionViewCell", for: indexPath) as! GoodsCollectionViewCell
             cell.setup(items[indexPath.row])
             return cell
         case .sweetMood(let items):
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StoryCollectionViewCell", for: indexPath) as! GoodsCollectionViewCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GoodsCollectionViewCell", for: indexPath) as! GoodsCollectionViewCell
             cell.setup(items[indexPath.row])
             return cell
+        case .BBQWithABang(let items):
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GoodsCollectionViewCell", for: indexPath) as! GoodsCollectionViewCell
+            cell.setup(items[indexPath.row])
+            return cell
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        switch kind {
+        case UICollectionView.elementKindSectionHeader:
+            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "CollectionViewHeaderReusableView", for: indexPath) as! CollectionViewHeaderReusableView
+            header.setup(sections[indexPath.section].title)
+            return header
+        default:
+            return UICollectionReusableView()
         }
     }
     

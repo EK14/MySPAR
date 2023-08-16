@@ -8,14 +8,19 @@
 import UIKit
 
 class StoryCollectionViewCell: UICollectionViewCell {
+    
+    private let img = UIImageView()
+    private let title = UILabel()
+    
     func setup(_ item: ListItem){
-        let img = UIImageView()
+        img.image = nil
+        title.text = nil
+        
         img.translatesAutoresizingMaskIntoConstraints = false
         img.image = UIImage(named: item.image)
         img.clipsToBounds = true
         img.layoutIfNeeded()
         
-        let title = UILabel()
         title.text = item.title
         title.textColor = .black
         title.font = UIFont.systemFont(ofSize: 10, weight: .regular)
