@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		3D00A6E72A8A7278005B2376 /* ListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D00A6E62A8A7278005B2376 /* ListSection.swift */; };
 		3D00A6E92A8A829B005B2376 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D00A6E82A8A829B005B2376 /* MockData.swift */; };
+		3D00A6EB2A8BCD69005B2376 /* StoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D00A6EA2A8BCD69005B2376 /* StoryCollectionViewCell.swift */; };
+		3D00A6ED2A8BCE43005B2376 /* PromotionsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D00A6EC2A8BCE43005B2376 /* PromotionsCollectionViewCell.swift */; };
+		3D00A6F02A8BCEEC005B2376 /* SelectionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D00A6EF2A8BCEEC005B2376 /* SelectionCollectionViewCell.swift */; };
+		3D00A6F22A8BCF41005B2376 /* GoodsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D00A6F12A8BCF41005B2376 /* GoodsCollectionViewCell.swift */; };
+		3D00A6F42A8BFBF8005B2376 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D00A6F32A8BFBF8005B2376 /* ListItem.swift */; };
 		3D3D7BD92A87AD0F001D8093 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3D7BD82A87AD0F001D8093 /* AppDelegate.swift */; };
 		3D3D7BDB2A87AD0F001D8093 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3D7BDA2A87AD0F001D8093 /* SceneDelegate.swift */; };
 		3D3D7BE22A87AD10001D8093 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D3D7BE12A87AD10001D8093 /* Assets.xcassets */; };
@@ -31,6 +36,11 @@
 /* Begin PBXFileReference section */
 		3D00A6E62A8A7278005B2376 /* ListSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSection.swift; sourceTree = "<group>"; };
 		3D00A6E82A8A829B005B2376 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		3D00A6EA2A8BCD69005B2376 /* StoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		3D00A6EC2A8BCE43005B2376 /* PromotionsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionsCollectionViewCell.swift; sourceTree = "<group>"; };
+		3D00A6EF2A8BCEEC005B2376 /* SelectionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionCollectionViewCell.swift; sourceTree = "<group>"; };
+		3D00A6F12A8BCF41005B2376 /* GoodsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsCollectionViewCell.swift; sourceTree = "<group>"; };
+		3D00A6F32A8BFBF8005B2376 /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
 		3D3D7BD52A87AD0F001D8093 /* MySpar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySpar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D3D7BD82A87AD0F001D8093 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D3D7BDA2A87AD0F001D8093 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +76,10 @@
 		3D00A6E52A8A7220005B2376 /* CollectionViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				3D00A6EA2A8BCD69005B2376 /* StoryCollectionViewCell.swift */,
+				3D00A6EC2A8BCE43005B2376 /* PromotionsCollectionViewCell.swift */,
+				3D00A6EF2A8BCEEC005B2376 /* SelectionCollectionViewCell.swift */,
+				3D00A6F12A8BCF41005B2376 /* GoodsCollectionViewCell.swift */,
 			);
 			path = CollectionViewCells;
 			sourceTree = "<group>";
@@ -162,6 +176,7 @@
 			children = (
 				3D5317E02A8A644E0061BAC5 /* City.swift */,
 				3D00A6E82A8A829B005B2376 /* MockData.swift */,
+				3D00A6F32A8BFBF8005B2376 /* ListItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -267,10 +282,14 @@
 				3D5317D72A8A60AC0061BAC5 /* MainPageViewControllerDelegate.swift in Sources */,
 				3D3D7BF22A87B7FF001D8093 /* UIColor.swift in Sources */,
 				3D3D7BFD2A87BB7A001D8093 /* TabBarController.swift in Sources */,
+				3D00A6F02A8BCEEC005B2376 /* SelectionCollectionViewCell.swift in Sources */,
+				3D00A6F42A8BFBF8005B2376 /* ListItem.swift in Sources */,
 				3D00A6E92A8A829B005B2376 /* MockData.swift in Sources */,
+				3D00A6EB2A8BCD69005B2376 /* StoryCollectionViewCell.swift in Sources */,
 				3D5317E32A8A651D0061BAC5 /* LocationButton.swift in Sources */,
 				3D5317DD2A8A63FB0061BAC5 /* DropDownMenuView.swift in Sources */,
 				3D5317DF2A8A64200061BAC5 /* DropDownMenuViewControllerDelegate.swift in Sources */,
+				3D00A6ED2A8BCE43005B2376 /* PromotionsCollectionViewCell.swift in Sources */,
 				3D3D7BFB2A87BAB9001D8093 /* MainPageView.swift in Sources */,
 				3D3D7BD92A87AD0F001D8093 /* AppDelegate.swift in Sources */,
 				3D3D7BF72A87BA30001D8093 /* MainPageViewControllerAssembly.swift in Sources */,
@@ -279,6 +298,7 @@
 				3D5317E12A8A644E0061BAC5 /* City.swift in Sources */,
 				3D3D7BF52A87B840001D8093 /* AppColorEnum.swift in Sources */,
 				3D00A6E72A8A7278005B2376 /* ListSection.swift in Sources */,
+				3D00A6F22A8BCF41005B2376 /* GoodsCollectionViewCell.swift in Sources */,
 				3D3D7BF92A87BA92001D8093 /* MainPageViewController.swift in Sources */,
 				3D3D7BDB2A87AD0F001D8093 /* SceneDelegate.swift in Sources */,
 			);

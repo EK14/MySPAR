@@ -8,11 +8,11 @@
 import Foundation
 
 enum ListSection{
-    case stories([String])
-    case promotions([String])
-    case selection([String])
-    case recommend([String])
-    case sweetMood([String])
+    case stories([ListItem])
+    case promotions([ListItem])
+    case selection([ListItem])
+    case recommend([ListItem])
+    case sweetMood([ListItem])
 //    case BBQWithABang([String])
 //    case specialForYou([String])
 //    case forKids([String])
@@ -24,7 +24,7 @@ enum ListSection{
 //    case childrenCare([String])
 //    case sparNovelty([String])
     
-    var items: [String]{
+    var items: [ListItem]{
         switch self{
         case .stories(let items),
                 .promotions(let items),
