@@ -32,7 +32,6 @@ class PromotionsCollectionViewCell: UICollectionViewCell {
             img.topAnchor.constraint(equalTo: contentView.topAnchor),
             img.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
             img.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width - 45),
-//            img.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width - 40),
             img.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
         ])
     }

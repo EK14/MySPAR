@@ -64,6 +64,6 @@ struct MockData{
 //    }()
     
     var pageData: [ListSection]{
-        [stories, promotions]
+        [stories, promotions, selection]
     }
 }

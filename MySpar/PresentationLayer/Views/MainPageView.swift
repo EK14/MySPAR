@@ -34,6 +34,7 @@ class MainPageView: UIView {
         collectionView.delegate = delegate
         collectionView.register(StoryCollectionViewCell.self, forCellWithReuseIdentifier: "StoryCollectionViewCell")
         collectionView.register(PromotionsCollectionViewCell.self, forCellWithReuseIdentifier: "PromotionsCollectionViewCell")
+        collectionView.register(SelectionCollectionViewCell.self, forCellWithReuseIdentifier: "SelectionCollectionViewCell")
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.isPagingEnabled = false
         let topBorder = CALayer()
@@ -67,7 +68,7 @@ class MainPageView: UIView {
             case .promotions:
                 return setupSection(.init(widthDimension: .absolute(UIScreen.main.bounds.width - 45), heightDimension: .fractionalHeight(0.25)), .init(top: 5, leading: 5, bottom: 5, trailing: 5), 10, .groupPagingCentered)
             case .selection:
-                return nil
+                return setupSection(.init(widthDimension: .fractionalWidth(0.25), heightDimension: .fractionalHeight(0.18)), .init(top: 5, leading: 23, bottom: 5, trailing: 5), 10, .continuous)
             case .recommend:
                 return nil
             case .sweetMood:

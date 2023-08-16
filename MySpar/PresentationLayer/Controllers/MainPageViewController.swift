@@ -77,7 +77,7 @@ extension MainPageViewController: MainPageViewControllerDelegate {
             cell.setup(items[indexPath.row % 20])
             return cell
         case .selection(let items):
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StoryCollectionViewCell", for: indexPath) as! SelectionCollectionViewCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SelectionCollectionViewCell", for: indexPath) as! SelectionCollectionViewCell
             cell.setup(items[indexPath.row])
             return cell
         case .recommend(let items):
