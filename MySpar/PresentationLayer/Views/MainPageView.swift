@@ -62,28 +62,10 @@ class MainPageView: UIView {
             guard let self = self else {return nil}
             let section = sections[sectionIndex]
             switch section {
-                
             case .stories:
-                let item = NSCollectionLayoutItem(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1)))
-                
-                let group = NSCollectionLayoutGroup.horizontal(layoutSize: .init(widthDimension: .fractionalWidth(0.23), heightDimension: .absolute(90)), subitems: [item])
-                
-                let section = NSCollectionLayoutSection(group: group)
-                
-                section.orthogonalScrollingBehavior = .continuous
-                section.contentInsets = .init(top: 10, leading: 5, bottom: 5, trailing: 5)
-                return section
+                return setupSection(.init(widthDimension: .fractionalWidth(0.23), heightDimension: .absolute(90)), .init(top: 10, leading: 5, bottom: 5, trailing: 5), 0, .continuous)
             case .promotions:
-                let item = NSCollectionLayoutItem(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1)))
-                
-                let group = NSCollectionLayoutGroup.horizontal(layoutSize: .init(widthDimension: .absolute(UIScreen.main.bounds.width - 45), heightDimension: .fractionalHeight(0.25)), subitems: [item])
-                
-                let section = NSCollectionLayoutSection(group: group)
-                
-                section.orthogonalScrollingBehavior = .groupPagingCentered
-                section.contentInsets = .init(top: 10, leading: 5, bottom: 5, trailing: 5)
-                section.interGroupSpacing = 10
-                return section
+                return setupSection(.init(widthDimension: .absolute(UIScreen.main.bounds.width - 45), heightDimension: .fractionalHeight(0.25)), .init(top: 5, leading: 5, bottom: 5, trailing: 5), 10, .groupPagingCentered)
             case .selection:
                 return nil
             case .recommend:
@@ -92,6 +74,20 @@ class MainPageView: UIView {
                 return nil
             }
         }
+    }
+    
+    private func setupSection(_ collectionLayoutSize: NSCollectionLayoutSize,_ contentInsets: NSDirectionalEdgeInsets,_ interGroupSpacing: CGFloat,_ orthogonalScrollingBehavior: UICollectionLayoutSectionOrthogonalScrollingBehavior) -> NSCollectionLayoutSection{
+        
+        let item = NSCollectionLayoutItem(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1)))
+        
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: collectionLayoutSize, subitems: [item])
+        
+        let section = NSCollectionLayoutSection(group: group)
+        
+        section.orthogonalScrollingBehavior = orthogonalScrollingBehavior
+        section.contentInsets = contentInsets
+        section.interGroupSpacing = interGroupSpacing
+        return section
     }
     
     @objc func buttonDidTouched(){

@@ -40,12 +40,20 @@ struct MockData{
                      ListItem(title: "", image: "promotions_icon17"),
                      ListItem(title: "", image: "promotions_icon18"),
                      ListItem(title: "", image: "promotions_icon19"),
-                     ListItem(title: "", image: "promotions_icon20"),])
+                     ListItem(title: "", image: "promotions_icon20")])
     }()
-//
-//    private let selection: ListSection = {
-//        .selection(["selection_icon1", "selection_icon2", "selection_icon3", "selection_icon4", "selection_icon5", "selection_icon6", "selection_icon7", "selection_icon8", "selection_icon9"])
-//    }()
+
+    private let selection: ListSection = {
+        .selection([ListItem(title: "", image: "selection_icon1"),
+                    ListItem(title: "", image: "selection_icon2"),
+                    ListItem(title: "", image: "selection_icon3"),
+                    ListItem(title: "", image: "selection_icon4"),
+                    ListItem(title: "", image: "selection_icon5"),
+                    ListItem(title: "", image: "selection_icon6"),
+                    ListItem(title: "", image: "selection_icon7"),
+                    ListItem(title: "", image: "selection_icon8"),
+                    ListItem(title: "", image: "selection_icon9")])
+    }()
 //
 //    private let recommend: ListSection = {
 //        .recommend(["recommend_icon1", "recommend_icon2", "recommend_icon3", "recommend_icon4", "recommend_icon5", "recommend_icon6", "recommend_icon7", "recommend_icon8", "recommend_icon9", "recommend_icon10"])
