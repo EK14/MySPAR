@@ -1,4 +1,4 @@
-# MySpar
+# MySPAR
 The project is a test task that I was given to select for an internship at "[1221systems](https://1221systems.ru/)".
 
 ## Screen Composition
