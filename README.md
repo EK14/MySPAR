@@ -12,6 +12,6 @@ The project is a test task that I was given to select for an internship at "[122
 
 The app ...
 1) is the main screen of the My SPAR application.
-2) was created only native development and layout tools - the UIKit and Foundation libraries.
-3) has the function of selecting geolocation and the necessary product.
+2) was created using only native development and layout tools - the UIKit and Foundation libraries.
+3) has the functions of selecting geolocation and the necessary product.
 4) was created according to the MVC pattern
