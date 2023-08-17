@@ -76,7 +76,6 @@ class DropDownMenuView: UIView {
 
 extension DropDownMenuView: DropDownMenuViewProtocol{
     func didLoad() {
-//        self.backgroundColor = .yellow
         setupTable()
         setUpCancelButton()
     }

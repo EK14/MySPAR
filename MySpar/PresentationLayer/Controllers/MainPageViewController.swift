@@ -11,13 +11,16 @@ class MainPageViewController: UIViewController {
     
     private let mainPageView: MainPageViewProtocol
     private var btnState = true
-    private let vc = DropDownMenuViewControllerAssembly().create(frame: UIScreen.main.bounds)
+    private let dropDownMenuViewController = DropDownMenuViewControllerAssembly().create(frame: UIScreen.main.bounds)
+    private let signUpViewController = SignUpViewControllerAssembly().create(frame: UIScreen.main.bounds)
+    
     private let sections = MockData.shared.pageData
     
     init(mainPageView: MainPageViewProtocol) {
         self.mainPageView = mainPageView
         super.init(nibName: nil, bundle: nil)
-        vc.delegate = self
+        dropDownMenuViewController.delegate = self
+        signUpViewController.delegate = self
     }
     
     required init?(coder: NSCoder) {
@@ -34,13 +37,13 @@ class MainPageViewController: UIViewController {
         view = mainPageView
     }
     
-    private func dropDownMenuViewPopUp(currentYOrigin: CGFloat, changedYOrigin: CGFloat){
-        self.view.insertSubview(vc.view, at: 1)
-        vc.view.frame.origin = CGPoint(x: 0, y: currentYOrigin)
-        UIView.animate(withDuration: 0.2) {
-            self.vc.view.frame.origin = CGPoint(x: 0, y: changedYOrigin)
+    private func viewPopUp(VC: UIViewController, currentYOrigin: CGFloat, changedYOrigin: CGFloat){
+        self.view.insertSubview(VC.view, at: 1)
+        VC.view.frame.origin = CGPoint(x: 0, y: currentYOrigin)
+        UIView.animate(withDuration: 0.3) {
+            VC.view.frame.origin = CGPoint(x: 0, y: changedYOrigin)
         }
-        addChild(vc)
+        addChild(VC)
         btnState.toggle()
     }
 
@@ -84,14 +87,17 @@ extension MainPageViewController: MainPageViewControllerDelegate {
             return cell
         case .recommend(let items):
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GoodsCollectionViewCell", for: indexPath) as! GoodsCollectionViewCell
+            cell.delegate = self
             cell.setup(items[indexPath.row])
             return cell
         case .sweetMood(let items):
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GoodsCollectionViewCell", for: indexPath) as! GoodsCollectionViewCell
+            cell.delegate = self
             cell.setup(items[indexPath.row])
             return cell
         case .BBQWithABang(let items):
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GoodsCollectionViewCell", for: indexPath) as! GoodsCollectionViewCell
+            cell.delegate = self
             cell.setup(items[indexPath.row])
             return cell
         }
@@ -110,21 +116,33 @@ extension MainPageViewController: MainPageViewControllerDelegate {
     
     func locationBtnDidTap() {
         if btnState{
-            dropDownMenuViewPopUp(currentYOrigin: view.frame.height, changedYOrigin: 120)
+            viewPopUp(VC: dropDownMenuViewController, currentYOrigin: view.frame.height, changedYOrigin: 120)
         }
         else{
-            dropDownMenuViewPopUp(currentYOrigin: 120, changedYOrigin: view.frame.height)
+            viewPopUp(VC: dropDownMenuViewController, currentYOrigin: 120, changedYOrigin: view.frame.height)
         }
     }
     
     func titleDidSelected(title: String) {
         mainPageView.setBtnTitle(title: title)
-        dropDownMenuViewPopUp(currentYOrigin: 120, changedYOrigin: view.frame.height)
+        viewPopUp(VC: dropDownMenuViewController, currentYOrigin: 120, changedYOrigin: view.frame.height)
         mainPageView.changeCollectionViewState()
     }
     
     func cancelBtnDidTap() {
-        dropDownMenuViewPopUp(currentYOrigin: 120, changedYOrigin: view.frame.height)
+        viewPopUp(VC: dropDownMenuViewController, currentYOrigin: 120, changedYOrigin: view.frame.height)
         mainPageView.changeCollectionViewState()
+    }
+    
+    func basketBtnDidTap(){
+        mainPageView.basketBtnDidTap()
+        navigationController?.tabBarController?.tabBar.isHidden = true
+        viewPopUp(VC: signUpViewController, currentYOrigin: view.frame.height, changedYOrigin: 0)
+    }
+    
+    func closeBtnDidTap(){
+        viewPopUp(VC: signUpViewController, currentYOrigin: 120, changedYOrigin: view.frame.height)
+        mainPageView.closeBtnDidTap()
+        navigationController?.tabBarController?.tabBar.isHidden = false
     }
 }

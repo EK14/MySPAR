@@ -20,10 +20,10 @@ class CollectionViewHeaderReusableView: UICollectionReusableView {
         self.addSubview(self.title)
         
         NSLayoutConstraint.activate([
-            self.title.topAnchor.constraint(equalTo: self.topAnchor),
+            self.title.topAnchor.constraint(equalTo: self.topAnchor, constant: 5),
             self.title.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             self.title.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            self.title.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            self.title.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -5),
         ])
     }
         

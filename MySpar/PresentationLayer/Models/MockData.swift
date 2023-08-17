@@ -83,16 +83,16 @@ struct MockData{
     }()
     
     private let bbqwithbang: ListSection = {
-        .BBQWithABang([ListItem(title: "149.90", image: "sweetmood_icon1", unit: "rubforshtuk"),
-                       ListItem(title: "79.90", image: "sweetmood_icon2", unit: "rubforshtuk"),
-                       ListItem(title: "79.90", image: "sweetmood_icon3", unit: "rubforshtuk"),
-                       ListItem(title: "79.90", image: "sweetmood_icon4", unit: "rubforshtuk"),
-                       ListItem(title: "239.90", image: "sweetmood_icon5", unit: "rubforshtuk"),
-                       ListItem(title: "239.90", image: "sweetmood_icon6", unit: "rubforshtuk"),
-                       ListItem(title: "99.90", image: "sweetmood_icon7", unit: "rubforshtuk"),
-                       ListItem(title: "99.90", image: "sweetmood_icon8", unit: "rubforshtuk"),
-                       ListItem(title: "99.90", image: "sweetmood_icon9", unit: "rubforshtuk"),
-                       ListItem(title: "319.90", image: "sweetmood_icon10", unit: "rubforshtuk")])
+        .BBQWithABang([ListItem(title: "149.90", image: "bbqWithABang_icon1", unit: "rubforshtuk"),
+                       ListItem(title: "79.90", image: "bbqWithABang_icon2", unit: "rubforshtuk"),
+                       ListItem(title: "79.90", image: "bbqWithABang_icon3", unit: "rubforshtuk"),
+                       ListItem(title: "79.90", image: "bbqWithABang_icon4", unit: "rubforshtuk"),
+                       ListItem(title: "239.90", image: "bbqWithABang_icon5", unit: "rubforshtuk"),
+                       ListItem(title: "239.90", image: "bbqWithABang_icon6", unit: "rubforshtuk"),
+                       ListItem(title: "99.90", image: "bbqWithABang_icon7", unit: "rubforshtuk"),
+                       ListItem(title: "99.90", image: "bbqWithABang_icon8", unit: "rubforshtuk"),
+                       ListItem(title: "99.90", image: "bbqWithABang_icon9", unit: "rubforshtuk"),
+                       ListItem(title: "319.90", image: "bbqWithABang_icon10", unit: "rubforshtuk")])
     }()
     
     var pageData: [ListSection]{

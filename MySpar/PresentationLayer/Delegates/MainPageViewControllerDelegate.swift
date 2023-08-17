@@ -12,4 +12,6 @@ protocol MainPageViewControllerDelegate: AnyObject, UICollectionViewDataSource, 
     func locationBtnDidTap()
     func titleDidSelected(title: String)
     func cancelBtnDidTap()
+    func basketBtnDidTap()
+    func closeBtnDidTap()
 }

@@ -11,6 +11,8 @@ protocol MainPageViewProtocol: UIView{
     func didLoad()
     func setBtnTitle(title: String)
     func changeCollectionViewState()
+    func basketBtnDidTap()
+    func closeBtnDidTap()
 }
 
 class MainPageView: UIView {
@@ -30,7 +32,6 @@ class MainPageView: UIView {
     
     private func setupCollectionView(){
         let layout = createLayout()
-        layout.configuration.scrollDirection = .vertical
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.dataSource = delegate
         collectionView.delegate = delegate
@@ -52,7 +53,6 @@ class MainPageView: UIView {
                 animated: false
             )
         }
-        collectionView.isPagingEnabled = true
         self.addSubview(collectionView)
         NSLayoutConstraint.activate([
             collectionView.topAnchor.constraint(equalTo: btn.bottomAnchor, constant: 5),
@@ -68,17 +68,17 @@ class MainPageView: UIView {
             let section = sections[sectionIndex]
             switch section {
             case .stories:
-                return setupSection(.init(widthDimension: .fractionalWidth(0.23), heightDimension: .absolute(90)), .init(top: 10, leading: 5, bottom: 5, trailing: 5), 0, .continuous)
+                return setupSection(.init(widthDimension: .fractionalWidth(0.23), heightDimension: .absolute(90)), .init(top: 0, leading: 5, bottom: 5, trailing: 5), 0, .continuous)
             case .promotions:
-                return setupSection(.init(widthDimension: .absolute(UIScreen.main.bounds.width - 45), heightDimension: .fractionalHeight(0.25)), .init(top: 5, leading: 5, bottom: 5, trailing: 5), 10, .groupPagingCentered)
+                return setupSection(.init(widthDimension: .absolute(UIScreen.main.bounds.width - 45), heightDimension: .fractionalHeight(0.25)), .init(top: 0, leading: 5, bottom: 5, trailing: 5), 10, .groupPagingCentered)
             case .selection:
-                return setupSection(.init(widthDimension: .fractionalWidth(0.25), heightDimension: .fractionalHeight(0.18)), .init(top: 5, leading: 23, bottom: 5, trailing: 5), 10, .continuous)
+                return setupSection(.init(widthDimension: .fractionalWidth(0.25), heightDimension: .fractionalHeight(0.18)), .init(top: 0, leading: 23, bottom: 5, trailing: 5), 10, .continuous)
             case .recommend:
-                return setupSection(.init(widthDimension: .fractionalWidth(0.4), heightDimension: .fractionalHeight(0.25)), .init(top: 5, leading: 23, bottom: 5, trailing: 5), 10, .continuous)
+                return setupSection(.init(widthDimension: .fractionalWidth(0.4), heightDimension: .fractionalHeight(0.25)), .init(top: 0, leading: 23, bottom: 5, trailing: 5), 10, .continuous)
             case .sweetMood:
-                return setupSection(.init(widthDimension: .fractionalWidth(0.4), heightDimension: .fractionalHeight(0.25)), .init(top: 5, leading: 23, bottom: 5, trailing: 5), 10, .continuous)
+                return setupSection(.init(widthDimension: .fractionalWidth(0.4), heightDimension: .fractionalHeight(0.25)), .init(top: 0, leading: 23, bottom: 5, trailing: 5), 10, .continuous)
             case .BBQWithABang:
-                return setupSection(.init(widthDimension: .fractionalWidth(0.4), heightDimension: .fractionalHeight(0.25)), .init(top: 5, leading: 23, bottom: 5, trailing: 5), 10, .continuous)
+                return setupSection(.init(widthDimension: .fractionalWidth(0.4), heightDimension: .fractionalHeight(0.25)), .init(top: 0, leading: 23, bottom: 5, trailing: 5), 10, .continuous)
             }
         }
     }
@@ -128,5 +128,13 @@ extension MainPageView: MainPageViewProtocol{
             collectionView.isHidden = true
         }
         collectionViewState.toggle()
+    }
+    
+    func basketBtnDidTap() {
+        changeCollectionViewState()
+    }
+    
+    func closeBtnDidTap(){
+        changeCollectionViewState()
     }
 }

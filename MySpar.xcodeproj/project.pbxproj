@@ -15,6 +15,10 @@
 		3D00A6F22A8BCF41005B2376 /* GoodsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D00A6F12A8BCF41005B2376 /* GoodsCollectionViewCell.swift */; };
 		3D00A6F42A8BFBF8005B2376 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D00A6F32A8BFBF8005B2376 /* ListItem.swift */; };
 		3D00A6F82A8D461D005B2376 /* CollectionViewHeaderReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D00A6F72A8D461D005B2376 /* CollectionViewHeaderReusableView.swift */; };
+		3D00A71D2A8E57AA005B2376 /* SignUpViewControllerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D00A71C2A8E57AA005B2376 /* SignUpViewControllerAssembly.swift */; };
+		3D00A71F2A8E57E3005B2376 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D00A71E2A8E57E3005B2376 /* SignUpViewController.swift */; };
+		3D00A7212A8E5812005B2376 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D00A7202A8E5812005B2376 /* SignUpView.swift */; };
+		3D00A7232A8E5922005B2376 /* SignUpViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D00A7222A8E5922005B2376 /* SignUpViewControllerDelegate.swift */; };
 		3D3D7BD92A87AD0F001D8093 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3D7BD82A87AD0F001D8093 /* AppDelegate.swift */; };
 		3D3D7BDB2A87AD0F001D8093 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3D7BDA2A87AD0F001D8093 /* SceneDelegate.swift */; };
 		3D3D7BE22A87AD10001D8093 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D3D7BE12A87AD10001D8093 /* Assets.xcassets */; };
@@ -43,6 +47,10 @@
 		3D00A6F12A8BCF41005B2376 /* GoodsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsCollectionViewCell.swift; sourceTree = "<group>"; };
 		3D00A6F32A8BFBF8005B2376 /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
 		3D00A6F72A8D461D005B2376 /* CollectionViewHeaderReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewHeaderReusableView.swift; sourceTree = "<group>"; };
+		3D00A71C2A8E57AA005B2376 /* SignUpViewControllerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewControllerAssembly.swift; sourceTree = "<group>"; };
+		3D00A71E2A8E57E3005B2376 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		3D00A7202A8E5812005B2376 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		3D00A7222A8E5922005B2376 /* SignUpViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewControllerDelegate.swift; sourceTree = "<group>"; };
 		3D3D7BD52A87AD0F001D8093 /* MySpar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySpar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D3D7BD82A87AD0F001D8093 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D3D7BDA2A87AD0F001D8093 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,9 +90,16 @@
 				3D00A6EC2A8BCE43005B2376 /* PromotionsCollectionViewCell.swift */,
 				3D00A6EF2A8BCEEC005B2376 /* SelectionCollectionViewCell.swift */,
 				3D00A6F12A8BCF41005B2376 /* GoodsCollectionViewCell.swift */,
-				3D00A6F72A8D461D005B2376 /* CollectionViewHeaderReusableView.swift */,
 			);
 			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		3D00A6F92A8E2668005B2376 /* CollectionReusableView */ = {
+			isa = PBXGroup;
+			children = (
+				3D00A6F72A8D461D005B2376 /* CollectionViewHeaderReusableView.swift */,
+			);
+			path = CollectionReusableView;
 			sourceTree = "<group>";
 		};
 		3D3D7BCC2A87AD0F001D8093 = {
@@ -118,6 +133,7 @@
 		3D3D7BEF2A87B7C7001D8093 /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				3D00A6F92A8E2668005B2376 /* CollectionReusableView */,
 				3D00A6E52A8A7220005B2376 /* CollectionViewCells */,
 				3D5317D52A8A5D130061BAC5 /* Delegates */,
 				3D5317D42A8A5CEA0061BAC5 /* Assembels */,
@@ -151,6 +167,7 @@
 				3D3D7BFA2A87BAB9001D8093 /* MainPageView.swift */,
 				3D5317DC2A8A63FB0061BAC5 /* DropDownMenuView.swift */,
 				3D5317E22A8A651D0061BAC5 /* LocationButton.swift */,
+				3D00A7202A8E5812005B2376 /* SignUpView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -190,6 +207,7 @@
 				3D3D7BF82A87BA92001D8093 /* MainPageViewController.swift */,
 				3D3D7BFC2A87BB7A001D8093 /* TabBarController.swift */,
 				3D5317DA2A8A63AC0061BAC5 /* DropDownMenuViewController.swift */,
+				3D00A71E2A8E57E3005B2376 /* SignUpViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -199,6 +217,7 @@
 			children = (
 				3D3D7BF62A87BA30001D8093 /* MainPageViewControllerAssembly.swift */,
 				3D5317D82A8A63840061BAC5 /* DropDownMenuViewControllerAssembly.swift */,
+				3D00A71C2A8E57AA005B2376 /* SignUpViewControllerAssembly.swift */,
 			);
 			path = Assembels;
 			sourceTree = "<group>";
@@ -208,6 +227,7 @@
 			children = (
 				3D5317D62A8A60AC0061BAC5 /* MainPageViewControllerDelegate.swift */,
 				3D5317DE2A8A64200061BAC5 /* DropDownMenuViewControllerDelegate.swift */,
+				3D00A7222A8E5922005B2376 /* SignUpViewControllerDelegate.swift */,
 			);
 			path = Delegates;
 			sourceTree = "<group>";
@@ -286,12 +306,15 @@
 				3D3D7BF22A87B7FF001D8093 /* UIColor.swift in Sources */,
 				3D00A6F82A8D461D005B2376 /* CollectionViewHeaderReusableView.swift in Sources */,
 				3D3D7BFD2A87BB7A001D8093 /* TabBarController.swift in Sources */,
+				3D00A71F2A8E57E3005B2376 /* SignUpViewController.swift in Sources */,
 				3D00A6F02A8BCEEC005B2376 /* SelectionCollectionViewCell.swift in Sources */,
 				3D00A6F42A8BFBF8005B2376 /* ListItem.swift in Sources */,
 				3D00A6E92A8A829B005B2376 /* MockData.swift in Sources */,
+				3D00A7212A8E5812005B2376 /* SignUpView.swift in Sources */,
 				3D00A6EB2A8BCD69005B2376 /* StoryCollectionViewCell.swift in Sources */,
 				3D5317E32A8A651D0061BAC5 /* LocationButton.swift in Sources */,
 				3D5317DD2A8A63FB0061BAC5 /* DropDownMenuView.swift in Sources */,
+				3D00A71D2A8E57AA005B2376 /* SignUpViewControllerAssembly.swift in Sources */,
 				3D5317DF2A8A64200061BAC5 /* DropDownMenuViewControllerDelegate.swift in Sources */,
 				3D00A6ED2A8BCE43005B2376 /* PromotionsCollectionViewCell.swift in Sources */,
 				3D3D7BFB2A87BAB9001D8093 /* MainPageView.swift in Sources */,
@@ -300,6 +323,7 @@
 				3D5317D92A8A63840061BAC5 /* DropDownMenuViewControllerAssembly.swift in Sources */,
 				3D5317DB2A8A63AC0061BAC5 /* DropDownMenuViewController.swift in Sources */,
 				3D5317E12A8A644E0061BAC5 /* City.swift in Sources */,
+				3D00A7232A8E5922005B2376 /* SignUpViewControllerDelegate.swift in Sources */,
 				3D3D7BF52A87B840001D8093 /* AppColorEnum.swift in Sources */,
 				3D00A6E72A8A7278005B2376 /* ListSection.swift in Sources */,
 				3D00A6F22A8BCF41005B2376 /* GoodsCollectionViewCell.swift in Sources */,

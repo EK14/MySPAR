@@ -13,6 +13,7 @@ class GoodsCollectionViewCell: UICollectionViewCell {
     private let label = UILabel()
     private let btn = UIButton()
     private let unitImg = UIImageView()
+    var delegate: MainPageViewControllerDelegate!
     
     func setup(_ item: ListItem){
         self.img.image = nil
@@ -20,8 +21,6 @@ class GoodsCollectionViewCell: UICollectionViewCell {
         self.unitImg.image = nil
         
         contentView.backgroundColor = .white
-//        contentView.layer.borderWidth = 0.5
-//        contentView.layer.borderColor = UIColor.gray.cgColor
         contentView.layer.cornerRadius = 20
         contentView.layer.shadowColor = UIColor.gray.cgColor
         contentView.layer.shadowOpacity = 0.2
@@ -46,6 +45,7 @@ class GoodsCollectionViewCell: UICollectionViewCell {
         btn.layer.cornerRadius = 20
         btn.clipsToBounds = true
         btn.imageView?.tintColor = .white
+        btn.addTarget(self, action: #selector(basketBtnDidTap), for: .touchUpInside)
         
         img.translatesAutoresizingMaskIntoConstraints = false
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -87,5 +87,10 @@ class GoodsCollectionViewCell: UICollectionViewCell {
             label.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -5),
         ])
         
+    }
+    
+    @objc
+    private func basketBtnDidTap(){
+        delegate.basketBtnDidTap()
     }
 }

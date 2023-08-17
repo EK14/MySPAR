@@ -14,15 +14,6 @@ enum ListSection{
     case recommend([ListItem])
     case sweetMood([ListItem])
     case BBQWithABang([ListItem])
-//    case specialForYou([String])
-//    case forKids([String])
-//    case cookForYou([String])
-//    case video([String])
-//    case weLoveFresh([String])
-//    case purityAndBeauty([String])
-//    case brands([String])
-//    case childrenCare([String])
-//    case sparNovelty([String])
     
     var items: [ListItem]{
         switch self{
@@ -32,15 +23,6 @@ enum ListSection{
                 .recommend(let items),
                 .sweetMood(let items),
                 .BBQWithABang(let items):
-//                .specialForYou(let items),
-//                .forKids(let items),
-//                .cookForYou(let items),
-//                .video(let items),
-//                .weLoveFresh(let items),
-//                .purityAndBeauty(let items),
-//                .brands(let items),
-//                .childrenCare(let items),
-//                .sparNovelty(let items):
             return items
         }
     }
